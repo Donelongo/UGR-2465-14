@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+@media (max-width: 480px) {
+    nav, .social-icons, aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
 /* nav start */
 *{
     box-sizing: border-box;
@@ -74,7 +82,7 @@ p{
     padding: 15px;
 }
 
-h1, h2{
+h1, h2, h3{
     color: white;
     font-weight: bold;
     padding: 10px;
@@ -90,6 +98,8 @@ h2{
     justify-content: center;
     align-items: center;
     margin: 20px auto;
+    border-radius: 1em;
+    width: 418px;
 }
 
 .about-me{
@@ -111,6 +121,7 @@ p::first-letter{
     width: 100%;
     height: auto;
     border-radius: 1em;
+    margin: 0 9px;
 }
 
 .hobbie-box{
@@ -132,6 +143,72 @@ p::first-letter{
     height: auto;
     width: 50px;
 }
+figcaption{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    color: darkturquoise;
+}
+
+.landscape-carousel .slide {
+    display: flex;
+    flex: 0 0 auto;
+    width: 55vh;
+    margin: 10px;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.portrait-carousel .slide {
+    display: flex;
+    flex: 0 0 auto;
+    width: 55vh;
+    margin: 10px;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.landscape-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.portrait-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+    padding-bottom: 10px;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #8A8A8A;
+}
+
+tr:nth-child(odd) {
+    background-color: #2C363F;
+}
+.first-table-row{
+    font-weight: bold;
+    color: #E8EE37;
+}
+
 
 /* main end */
 

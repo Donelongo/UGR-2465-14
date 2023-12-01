@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 @media (max-width: 480px) {
     nav, .social-icons, aside{
@@ -21,9 +21,9 @@ body {
 }
 
 li, a{
-    font-family: "Montserrat", sans-serif;
+    font-family: "nunito";
     font-weight: 500;
-    font-size: 16px;
+    font-size: 17px;
     color: #edf0f1;
     text-decoration: none;
 }
@@ -80,16 +80,23 @@ p{
     position: relative;
     font-size: 18px;
     padding: 15px;
+    font-family: "nunito";
 }
 
 h1, h2, h3{
     color: white;
     font-weight: bold;
     padding: 10px;
+    font-family: "nunito";
+    text-align: center;
+
+}
+h1{
+    font-size: 35px;
 }
 
 h2{
-    font-size: 26px;
+    font-size: 25px;
 }
 
 .home.my-image{
@@ -97,9 +104,16 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px auto;
+    margin: 1.25rem auto;
     border-radius: 1em;
-    width: 418px;
+}
+
+.myimgContainer{
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-me{
@@ -118,10 +132,16 @@ p::first-letter{
 
 }
 .image{
-    width: 100%;
+    display: block;
+    width: 90vw;
     height: auto;
     border-radius: 1em;
-    margin: 0 9px;
+    margin: 0 auto;
+}
+
+.sliding-image {
+    margin: 0 0 0 2vw;
+    width: 96vw;
 }
 
 .hobbie-box{
@@ -137,7 +157,6 @@ p::first-letter{
     padding: 10px;
     background-color: #7C898B;
     margin: 10px 1px;
-    box-shadow: 0px 0px 10px 0px #AE7100;
 }
 .hobbie-image{
     height: auto;
@@ -150,45 +169,28 @@ figcaption{
     color: darkturquoise;
 }
 
-.landscape-carousel .slide {
+.landscape-carousel .slide , .portrait-carousel .slide{
     display: flex;
     flex: 0 0 auto;
-    width: 55vh;
+    width: 100vw;
     margin: 10px;
     scroll-snap-align: start;
     position: relative;
 }
 
-.portrait-carousel .slide {
-    display: flex;
-    flex: 0 0 auto;
-    width: 55vh;
-    margin: 10px;
-    scroll-snap-align: start;
-    position: relative;
-}
-
-.landscape-carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.portrait-carousel {
+.landscape-carousel, .portrait-carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
 
 table {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 96vw;
     color: white;
     padding-bottom: 10px;
+    margin: 0 2vw;
 }
   
 td, th {
@@ -238,10 +240,14 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    padding: 0 1rem;
 }
 
 .contacttxt{
+    display: flex;
     padding: 0 1rem;
+    justify-content: center;
+    align-items: center;
     color: white;
     opacity: 0.7;
     transition: 250ms;
